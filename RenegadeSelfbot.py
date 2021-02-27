@@ -26,8 +26,6 @@ with open('config.json') as f:
 token = config.get('token')
 prefix = config.get('prefix')
 
-nitro_sniper = config.get('nitro_sniper')
-
 intents = discord.Intents.all()
 Renegade = discord.Client()
 Renegade = commands.Bot(command_prefix=prefix,self_bot=True,intents=intents)
@@ -42,10 +40,6 @@ Renegade.edited_message_avatar = {}
 Renegade.remove_command('help')
 
 def startPrint():
-    if nitro_sniper:
-        nitro = "Active"
-    else:
-        nitro = "Disabled"
     print(f'''{Fore.RED}
                 
                 
